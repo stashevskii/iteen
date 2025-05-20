@@ -5,7 +5,7 @@ from PIL import Image
 
 class Resizer:
     def __init__(self):
-        self.__src_img: Image.Image
+        self.__src_img: Image.Image | None = None
 
     def __get_bytes(self, img):
         arr = BytesIO()

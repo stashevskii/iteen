@@ -13,4 +13,4 @@ format_keyboard.add(types.InlineKeyboardButton("BMP", callback_data="image_forma
 
 filters_keyboard = types.InlineKeyboardMarkup()
 filters_keyboard.add(types.InlineKeyboardButton("Блюр", callback_data="image_filter_BLUR"))
-filters_keyboard.add(types.InlineKeyboardButton("Контур", callback_data="image_filter_COUTOUR"))
+filters_keyboard.add(types.InlineKeyboardButton("Контур", callback_data="image_filter_EMBOSS"))
