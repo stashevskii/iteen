@@ -8,7 +8,7 @@ def delete_message(bot: TeleBot, message: types.Message, subtract: int = 0):
     bot.delete_message(message.chat.id, message.message_id - subtract)
 
 
-def get_photo(bot: TeleBot, message: types.Message, unsuccess: Callable):
+def get_photo(bot: TeleBot, message: types.Message, unsuccess: Callable) -> bytes | None:
     if not message.photo:
         delete_message(bot, message)
         bot.send_message(message.chat.id, send_me_photo_phrase)

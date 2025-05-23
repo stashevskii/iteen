@@ -20,7 +20,14 @@ def create_bot() -> TeleBot:
 
 
 def polling(bot: TeleBot) -> None:
-    bot.polling(interval=0, none_stop=True)
+    try:
+        while True:
+            try:
+                bot.polling(interval=0, none_stop=True)
+            except Exception as e:
+                print(e)
+    except KeyboardInterrupt:
+        exit(0)
 
 
 bot = create_bot()

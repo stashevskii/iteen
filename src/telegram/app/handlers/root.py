@@ -9,12 +9,12 @@ class RootHandler(BaseHandler):
     def __init__(self, bot: TeleBot):
         super().__init__(bot)
 
-    def start(self, message: types.Message):
+    def start(self, message: types.Message) -> None:
         self.bot.send_message(message.chat.id, greet_phrase, reply_markup=start_keyboard)
 
-    def menu(self, message: types.Message):
+    def menu(self, message: types.Message) -> None:
         self.bot.send_message(message.chat.id, menu_phrase, reply_markup=start_keyboard)
 
-    def register_command_handlers(self):
+    def register_command_handlers(self) -> None:
         self.bot.message_handler(commands=["start"])(self.start)
         self.bot.message_handler(commands=["menu"])(self.menu)
