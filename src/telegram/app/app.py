@@ -2,13 +2,14 @@ from telebot import TeleBot
 
 from src.telegram.app.handlers.filter import FiltersHandler
 from src.telegram.app.handlers.format import FormatChangeHandler
+from src.telegram.app.handlers.qr import QRHandler
 from src.telegram.app.handlers.resize import ResizeHandler
 from src.telegram.app.handlers.root import RootHandler
 from src.telegram.app.utils.env import config
 
 
 def init_handlers(bot: TeleBot) -> None:
-    handlers = [RootHandler, ResizeHandler, FormatChangeHandler, FiltersHandler]
+    handlers = [RootHandler, ResizeHandler, FormatChangeHandler, FiltersHandler, QRHandler]
     for handler in handlers:
         handler(bot).register_command_handlers()
 
@@ -22,10 +23,7 @@ def create_bot() -> TeleBot:
 def polling(bot: TeleBot) -> None:
     try:
         while True:
-            try:
-                bot.polling(interval=0, none_stop=True)
-            except Exception as e:
-                print(e)
+            bot.polling(interval=0, none_stop=True)
     except KeyboardInterrupt:
         exit(0)
 

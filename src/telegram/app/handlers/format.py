@@ -1,5 +1,4 @@
 from telebot import TeleBot, types
-
 from src.images.format import FormatChanger
 from src.telegram.app.keyboards.inline import format_keyboard
 from src.telegram.app.utils.bot import get_photo, delete_message

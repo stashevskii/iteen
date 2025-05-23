@@ -4,6 +4,7 @@ start_keyboard = types.InlineKeyboardMarkup()
 start_keyboard.add(types.InlineKeyboardButton("Изменить размер", callback_data="resize"))
 start_keyboard.add(types.InlineKeyboardButton("Изменить формат", callback_data="format"))
 start_keyboard.add(types.InlineKeyboardButton("Наложить фильтры", callback_data="filters"))
+start_keyboard.add(types.InlineKeyboardButton("Создать QR код", callback_data="qr"))
 
 format_keyboard = types.InlineKeyboardMarkup()
 format_keyboard.add(types.InlineKeyboardButton("WEBP", callback_data="image_format_WEBP"))
