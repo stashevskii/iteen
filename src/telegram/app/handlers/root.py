@@ -1,7 +1,7 @@
 from telebot import TeleBot, types
 from src.telegram.app.keyboards.inline import start_keyboard
 from src.telegram.app.utils.phrases import greet_phrase, menu_phrase, help_phrase
-from src.telegram.app.сommon.handler import BaseHandler
+from src.telegram.app.common.handler import BaseHandler
 
 
 class RootHandler(BaseHandler):

@@ -2,6 +2,7 @@ from telebot import TeleBot
 
 from src.telegram.app.handlers.filter import FiltersHandler
 from src.telegram.app.handlers.format import FormatChangeHandler
+from src.telegram.app.handlers.itt import ImageToTextHandler
 from src.telegram.app.handlers.qr import QRHandler
 from src.telegram.app.handlers.resize import ResizeHandler
 from src.telegram.app.handlers.root import RootHandler
@@ -9,7 +10,7 @@ from src.telegram.app.utils.env import config
 
 
 def init_handlers(bot: TeleBot) -> None:
-    handlers = [RootHandler, ResizeHandler, FormatChangeHandler, FiltersHandler, QRHandler]
+    handlers = [RootHandler, ResizeHandler, FormatChangeHandler, FiltersHandler, QRHandler, ImageToTextHandler]
     for handler in handlers:
         handler(bot).register_command_handlers()
 

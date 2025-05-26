@@ -2,7 +2,7 @@ from telebot import TeleBot, types
 from src.images.qr import QR
 from src.telegram.app.utils.bot import delete_message
 from src.telegram.app.utils.phrases import send_me_url_phrase, qr_code_phrase
-from src.telegram.app.сommon.handler import BaseHandler
+from src.telegram.app.common.handler import BaseHandler
 
 
 class QRHandler(BaseHandler):

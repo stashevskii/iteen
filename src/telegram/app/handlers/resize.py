@@ -2,7 +2,7 @@ from telebot import TeleBot, types
 from src.images.resize import Resizer
 from src.telegram.app.utils.phrases import *
 from src.telegram.app.utils.validation import check_new_sizes
-from src.telegram.app.сommon.handler import BaseHandler
+from src.telegram.app.common.handler import BaseHandler
 from src.telegram.app.utils.bot import get_photo, delete_message
 
 

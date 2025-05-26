@@ -3,7 +3,7 @@ from src.images.format import FormatChanger
 from src.telegram.app.keyboards.inline import format_keyboard
 from src.telegram.app.utils.bot import get_photo, delete_message
 from src.telegram.app.utils.phrases import send_me_photo_phrase, choose_format_phrase, changed_image_phrase
-from src.telegram.app.сommon.handler import BaseHandler
+from src.telegram.app.common.handler import BaseHandler
 
 
 class FormatChangeHandler(BaseHandler):
